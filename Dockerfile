@@ -4,6 +4,8 @@ FROM python:latest
 # i have chosen /usr/app/src
 WORKDIR /
 
-COPY * /
+COPY . .
+
+RUN pip install -r requirements.txt
 
 CMD [ "python", "./main.py"]
